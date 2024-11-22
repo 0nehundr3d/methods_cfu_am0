@@ -49,7 +49,16 @@
 first_name = "Jeff"
 puts first_name.start_with?("J")
 
+name = "foo"
+value = "bar"
 
+# The .empty? method returns true if the givin string is ""
+# Returns false because "foo" != ""
+puts name.empty?
+
+# The .chars method returns an array of the characters in a givin string
+# Returns the array ["b", "a", "r"]
+puts value.chars
 
 # SECTION 3: Calling methods on variables assigned to integers.
 # Declare 2 variables assigned to integer objects.
@@ -57,10 +66,31 @@ puts first_name.start_with?("J")
 # https://ruby-doc.org/core-3.1.0/Integer.html
 # Include comments above each method call explaining the impact and return value of that method.
 
+age = 12
+num = 25
 
+# The zero? method returns true if the givin integer is equal to zero
+# Returns false because 12 != 0
+puts age.zero?
+
+# The .dib method divides the givin integer by another integer
+# Returns 5 because 25/5 = 5
+puts num.div(5)
 
 # SECTION 4: Calling methods on variables assigned to arrays.
 # Declare 2 variables assigned to arrays.
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Array.html
 # Include comments above each method call explaining the impact and return value of that method.
+
+names = ["Todd", "Jake", "Dave"]
+ages = [25, 51, 15]
+
+# The .index method returns the index of a givin value
+# Returns 2 because dave is the third element in the array
+puts names.index("Dave")
+
+# The .push method adds a givin value to the end of an array
+# After 5 is pushed the ages array is equal to [25, 51, 15, 5]
+ages.push(5)
+puts ages
